@@ -1,30 +1,25 @@
-// app/page.tsx (Server Component)
-import Link from "next/link";
-import Image from "next/image";
-import Counter from "../app/components/Counter";
-export const metadata = {
-title: "Home — Next.js Lab",
-description: "Learning Next.js hands‑on",
-};
-export default function Page() {
-return (
-<main className="mx-auto max-w-screen-md p-6 space-y-6">
-<header className="flex items-center gap-4">
-<Image src="/avatar.png" width={80} height={80} alt="Avatar"
-className="rounded-full" />
-<div>
-<h1 className="text-3xl font-bold">Welcome to Next.js Lab</h1>
-<p className="text-sm opacity-80">Server Components by default;
-client only where needed.</p>
-</div>
-</header>
-<section className="space-y-2">
-<p>
-Try the dynamic route: <Link className="underline" href="/hello/
-Sonai">/hello/Sonai</Link>
-</p>
-<Counter />
-</section>
-</main>
-);
+// app/page.tsx
+export default function HomePage() {
+  return (
+    <div className="text-center space-y-6">
+      <h1 className="text-5xl font-extrabold text-blue-600">Welcome to NextCorp 🚀</h1>
+      <p className="text-lg text-gray-700">
+        Building modern web apps with <span className="font-semibold">Next.js</span>.
+      </p>
+      <div className="flex justify-center gap-4">
+        <a
+          href="/about"
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+        >
+          Learn More
+        </a>
+        <a
+          href="/shop"
+          className="px-6 py-3 bg-gray-200 text-gray-900 rounded-lg shadow hover:bg-gray-300 transition"
+        >
+          Visit Shop
+        </a>
+      </div>
+    </div>
+  );
 }
